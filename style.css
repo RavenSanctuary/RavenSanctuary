@@ -3,7 +3,7 @@
 .hero{
     width:100%;
     min-height:100vh;
-    background:url("ae20481fdf4dca85142c6e7c51284c8c.webp.jpg") center center/cover no-repeat;
+    background:("ae20481fdf4dca85142c6e7c51284c8c.jpg") center center/cover no-repeat;
     display:flex;
     flex-direction:column;
     align-items:center;
