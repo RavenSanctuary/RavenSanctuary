@@ -13,7 +13,7 @@ body {
 
 header {
     text-align: center;
-    padding: 30px 20px;
+    padding: 20px 10px 0px 10px;
 }
 
 .logo {
@@ -23,51 +23,57 @@ header {
     margin: auto;
 }
 
+/* Side-by-side section */
 .intro {
-    width: 90%;
-    max-width: 900px;
-    margin: 40px auto;
+    width: 92%;
+    max-width: 850px;
+    margin: 20px auto;
 
     display: flex;
     flex-direction: row;
+    align-items: flex-start; /* Aligns top of image with top of text */
+    justify-content: center;
 
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
-    padding: 20px;
-
-    /* Removed background, blur, and border-radius so the dark card disappears */
+    gap: 12px;               /* Reduced gap so text has more room on mobile */
+    box-sizing: border-box;
 }
 
+/* Responsive Image Container */
 .profile-box {
-    width: 220px;       /* Increased width slightly to match layout */
-    height: 220px;      /* Increased height to fit paragraph height better */
+    width: 38%;              /* Takes 38% of mobile width instead of fixed 220px */
+    max-width: 220px;        /* Limits max size on desktop screens */
     flex-shrink: 0;
 }
 
 .profile-box img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px; /* Reduced corner curve to match the sharp-edged photo style */
-    /* Removed image border frame */
+    height: auto;            /* Keeps image proportions correct */
+    border-radius: 4px;
+    display: block;
 }
 
+/* Responsive Text */
 .intro-text {
     flex: 1;
 }
 
-.intro-text h1 {
-    font-family: 'Special Elite', cursive;
-    font-size: 42px;
-    margin-top: 0;
-}
-
 .intro-text p {
     font-family: 'Special Elite', cursive;
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 13px;         /* Scaled down so full sentences fit on mobile */
+    line-height: 1.4;
     color: #e0e0e0;
     margin: 0;
+    text-align: left;
+}
+
+/* Desktop and Tablet Enhancements (larger fonts & spacing when screen allows) */
+@media (min-width: 600px) {
+    .intro {
+        gap: 25px;
+        margin: 40px auto;
+    }
+    .intro-text p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
 }
