@@ -27,52 +27,113 @@ header {
 .intro {
     width: 92%;
     max-width: 850px;
-    margin: 20px auto;
+    margin: 20px auto 10px auto;
 
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* Aligns top of image with top of text */
+    align-items: flex-start;
     justify-content: center;
 
-    gap: 12px;               /* Reduced gap so text has more room on mobile */
+    gap: 12px;
     box-sizing: border-box;
 }
 
-/* Responsive Image Container */
 .profile-box {
-    width: 38%;              /* Takes 38% of mobile width instead of fixed 220px */
-    max-width: 220px;        /* Limits max size on desktop screens */
+    width: 38%;
+    max-width: 220px;
     flex-shrink: 0;
 }
 
 .profile-box img {
     width: 100%;
-    height: auto;            /* Keeps image proportions correct */
+    height: auto;
     border-radius: 4px;
     display: block;
 }
 
-/* Responsive Text */
 .intro-text {
     flex: 1;
 }
 
 .intro-text p {
     font-family: 'Special Elite', cursive;
-    font-size: 13px;         /* Scaled down so full sentences fit on mobile */
+    font-size: 13px;
     line-height: 1.4;
     color: #e0e0e0;
     margin: 0;
     text-align: left;
 }
 
-/* Desktop and Tablet Enhancements (larger fonts & spacing when screen allows) */
+/* YouTube Music Card Styling */
+.music-player {
+    width: 92%;
+    max-width: 850px;
+    margin: 20px auto 40px auto;
+}
+
+.yt-music-card {
+    display: block;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.yt-music-card:hover {
+    background: rgba(0, 0, 0, 0.65);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.yt-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.yt-icon {
+    font-size: 22px;
+    background: #ff0000;
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.yt-text h3 {
+    margin: 0;
+    font-family: 'Special Elite', cursive;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.yt-text p {
+    margin: 4px 0 0 0;
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+/* Desktop sizing */
 @media (min-width: 600px) {
     .intro {
         gap: 25px;
-        margin: 40px auto;
+        margin: 40px auto 20px auto;
     }
     .intro-text p {
         font-size: 18px;
         line-height: 1.8;
     }
+    .yt-text h3 {
+        font-size: 20px;
+    }
+    .yt-text p {
+        font-size: 14px;
+    }
+}
