@@ -77,3 +77,11 @@ header {
         line-height: 1.8;
     }
 }
+.music-player {
+    width: 92%;
+    max-width: 850px;
+    margin: 10px auto 40px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Gives a subtle dark shadow behind the player */
+}
