@@ -63,15 +63,24 @@ header {
     margin: 0;
     text-align: left;
 }
-
-/* YouTube Music Card Styling */
-.music-player {
+.music-section {
     width: 92%;
     max-width: 850px;
-    margin: 20px auto 40px auto;
+    margin: 30px auto 40px auto;
 }
 
-.yt-music-card {
+.playlist-label {
+    font-family: 'Special Elite', cursive;
+    font-size: 18px;
+    color: #e0e0e0;
+    margin: 0 0 10px 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+/* Spotify Card Custom Colors */
+.spotify-card {
     display: block;
     background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(8px);
@@ -83,20 +92,19 @@ header {
     transition: all 0.3s ease;
 }
 
-.yt-music-card:hover {
+.spotify-card:hover {
     background: rgba(0, 0, 0, 0.65);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: #1DB954;
 }
 
-.yt-info {
+.spotify-info {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.yt-icon {
-    font-size: 22px;
-    background: #ff0000;
+.spotify-icon {
+    background: #1DB954; /* Spotify Green */
     color: white;
     width: 42px;
     height: 42px;
@@ -107,33 +115,15 @@ header {
     flex-shrink: 0;
 }
 
-.yt-text h3 {
+.spotify-text h3 {
     margin: 0;
     font-family: 'Special Elite', cursive;
     font-size: 17px;
     color: #ffffff;
 }
 
-.yt-text p {
+.spotify-text p {
     margin: 4px 0 0 0;
     font-size: 12px;
     color: #b3b3b3;
-}
-
-/* Desktop sizing */
-@media (min-width: 600px) {
-    .intro {
-        gap: 25px;
-        margin: 40px auto 20px auto;
     }
-    .intro-text p {
-        font-size: 18px;
-        line-height: 1.8;
-    }
-    .yt-text h3 {
-        font-size: 20px;
-    }
-    .yt-text p {
-        font-size: 14px;
-    }
-}
