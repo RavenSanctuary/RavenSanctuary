@@ -127,3 +127,9 @@ header {
     font-size: 12px;
     color: #b3b3b3;
     }
+/* Disable text selection across the site */
+body {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* IE 10+ */
+    user-select: none;         /* Standard */
+    }
