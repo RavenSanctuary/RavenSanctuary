@@ -142,3 +142,30 @@ body {
     pointer-events: none; /* Allows visitors to click buttons through the rain */
     z-index: 99;          /* Keeps rain visible over background images */
 }
+/* Animated Rain Overlay */
+.rain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Allows clicking links and buttons beneath it */
+    z-index: 999;         /* Keeps rain layer on top of background images */
+    background-image: 
+        radial-gradient(1px 15px at 10% 20%, rgba(255, 255, 255, 0.4), transparent),
+        radial-gradient(1.5px 25px at 30% 70%, rgba(255, 255, 255, 0.6), transparent),
+        radial-gradient(1px 20px at 50% 40%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(2px 30px at 70% 80%, rgba(255, 255, 255, 0.5), transparent),
+        radial-gradient(1px 18px at 90% 10%, rgba(255, 255, 255, 0.4), transparent);
+    background-size: 400px 400px;
+    animation: rainAnimation 0.8s linear infinite;
+}
+
+@keyframes rainAnimation {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: -50px 400px;
+    }
+}
